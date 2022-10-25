@@ -24,18 +24,41 @@ public class DvD {
     }
 
     public void setDirectorsName(String newDirectorName) {
+        this.DirectorsName = DirectorsName;
     }
 
     public void setUserRating(String newUserRating) {
+        this.UserRating = UserRating;
+
     }
 
     public void setMPAA(String newMpaaRating) {
+        this.MPAA = MPAA;
     }
 
     public void setReleaseDate(String newReleaseDate) {
+        this.ReleaseDate = ReleaseDate;
     }
 
     public void setStudio(String newStudioName) {
+
+    }
+
+    public String getDvdId() {
+        return DvdId();
+    }
+
+    private String DvdId() {
+        return null;
+    }
+
+    public void setCohort(String cohort) {
+    }
+
+    public void setLastName(String lastName) {
+    }
+
+    public void setFirstName(String firstName) {
     }
     //implement
 }

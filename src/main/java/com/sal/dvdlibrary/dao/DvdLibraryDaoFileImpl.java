@@ -39,12 +39,10 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     }
     
     @Override
-    public DvD addDvd(String title, DvD dvd) 
-      {
-       
-        //implement
-          return dvd;
-      }
+    public DvD addDvd(String title, DvD dvd) throws DvdLibraryDaoException {
+          //implement
+        return dvd;
+    }
 
     /*
     This code gets all the DvDs objects out of the dvds map as a collection by calling the values() method.

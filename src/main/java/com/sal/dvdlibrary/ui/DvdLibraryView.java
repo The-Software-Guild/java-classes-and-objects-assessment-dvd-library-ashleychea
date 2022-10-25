@@ -19,15 +19,21 @@ public class DvdLibraryView {
     public DvdLibraryView(UserIO io) {
         this.io = io;
     }
-
     public int printMenuAndGetSelection() {
         //implement
-        return 0;
+        io.print("Main Menu");
+        io.print("1. Add DVD");
+        io.print("2. Remove DVD ");
+        io.print("3. View all DVDs ");
+        io.print("4. Search all DVDs");
+        io.print("5. Edit DVD");
+        io.print("Exit");
+        return io.readInt("Please select from the given choices above.", 1,6);
     }
 
-    public int printEditMenuAndGetSelection() {
+    public DvD printEditMenuAndGetSelection() {
         //implement
-        return 0;
+      return null;
     }
 
     /*
@@ -36,7 +42,15 @@ public class DvdLibraryView {
      */
     public DvD getNewDvDInfo() {
         //implement
-        return null;
+        String dvdId = io.readString("Please enter the DVD ID");
+        String firstName = io.readString("Please enter the First Name");
+        String lastName = io.readString("Please enter the Last Name");
+        String cohort = io.readString("Please enter the Cohort");
+        DvD currentDvd = new DvD(dvdId);
+        currentDvd.setFirstName(firstName);
+        currentDvd.setLastName(lastName);
+        currentDvd.setCohort(cohort);
+        return currentDvd;
     }
 
     /*
@@ -68,7 +82,7 @@ public class DvdLibraryView {
     }
 
     /*
-    Shows the dtudent banner
+    Shows the student banner
      */
     public void displayDisplayDvdBanner() {
         io.print("=== Display Dvd ===");
@@ -84,7 +98,7 @@ public class DvdLibraryView {
     /*
     Displays the dvd information
      */
-    public void displayDvd(DvD dvd) {
+    public void displayDvd(String dvd) {
         //implement
     }
 
@@ -168,5 +182,8 @@ public class DvdLibraryView {
     }
 
     public void printDvDs() {
+    }
+
+    public void displayRemoveDvDBanner() {
     }
 }
